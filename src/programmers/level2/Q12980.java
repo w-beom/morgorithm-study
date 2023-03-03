@@ -11,11 +11,11 @@ public class Q12980 {
     }
 
     private static int solution(int n) {
-        int move = 1; // 지나온 거리
-        while (move * 2 < n) {
-            move *= 2;
+        int answer = 0;
+        while (n > 0) {
+            answer += n % 2;
+            n /= 2;
         }
-
-        return (n - move) + 1;
+        return answer;
     }
 }
